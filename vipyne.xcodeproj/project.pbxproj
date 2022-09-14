@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C5A959E28CA98A800495D31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5A959D28CA98A800495D31 /* AppDelegate.swift */; };
+		3C5A95A028CA98A800495D31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5A959F28CA98A800495D31 /* ViewController.swift */; };
+		3C5A95A228CA98A900495D31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C5A95A128CA98A900495D31 /* Assets.xcassets */; };
+		3C5A95A528CA98A900495D31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5A95A328CA98A900495D31 /* Main.storyboard */; };
+		3C5A95B328CA9B6400495D31 /* camProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5A95B228CA9B6400495D31 /* camProvider.swift */; };
+		3C5A95B528CA9B6400495D31 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5A95B428CA9B6400495D31 /* main.swift */; };
+		3C5A95BA28CA9B6400495D31 /* com.daily.vipyne.cam.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = 3C5A95B028CA9B6400495D31 /* com.daily.vipyne.cam.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3C5A95B828CA9B6400495D31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C5A959228CA98A800495D31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C5A95AF28CA9B6400495D31;
+			remoteInfo = cam;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3C5A95BE28CA9B6400495D31 /* Embed System Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				3C5A95BA28CA9B6400495D31 /* com.daily.vipyne.cam.systemextension in Embed System Extensions */,
+			);
+			name = "Embed System Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3C5A959A28CA98A800495D31 /* vipyne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vipyne.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C5A959D28CA98A800495D31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3C5A959F28CA98A800495D31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3C5A95A128CA98A900495D31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3C5A95A428CA98A900495D31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3C5A95A628CA98A900495D31 /* vipyne.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = vipyne.entitlements; sourceTree = "<group>"; };
+		3C5A95B028CA9B6400495D31 /* com.daily.vipyne.cam.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = com.daily.vipyne.cam.systemextension; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C5A95B228CA9B6400495D31 /* camProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = camProvider.swift; sourceTree = "<group>"; };
+		3C5A95B428CA9B6400495D31 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3C5A95B628CA9B6400495D31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C5A95B728CA9B6400495D31 /* cam.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = cam.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3C5A959728CA98A800495D31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C5A95AD28CA9B6400495D31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C5A959128CA98A800495D31 = {
+			isa = PBXGroup;
+			children = (
+				3C5A959C28CA98A800495D31 /* vipyne */,
+				3C5A95B128CA9B6400495D31 /* cam */,
+				3C5A959B28CA98A800495D31 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3C5A959B28CA98A800495D31 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C5A959A28CA98A800495D31 /* vipyne.app */,
+				3C5A95B028CA9B6400495D31 /* com.daily.vipyne.cam.systemextension */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3C5A959C28CA98A800495D31 /* vipyne */ = {
+			isa = PBXGroup;
+			children = (
+				3C5A959D28CA98A800495D31 /* AppDelegate.swift */,
+				3C5A959F28CA98A800495D31 /* ViewController.swift */,
+				3C5A95A128CA98A900495D31 /* Assets.xcassets */,
+				3C5A95A328CA98A900495D31 /* Main.storyboard */,
+				3C5A95A628CA98A900495D31 /* vipyne.entitlements */,
+			);
+			path = vipyne;
+			sourceTree = "<group>";
+		};
+		3C5A95B128CA9B6400495D31 /* cam */ = {
+			isa = PBXGroup;
+			children = (
+				3C5A95B228CA9B6400495D31 /* camProvider.swift */,
+				3C5A95B428CA9B6400495D31 /* main.swift */,
+				3C5A95B628CA9B6400495D31 /* Info.plist */,
+				3C5A95B728CA9B6400495D31 /* cam.entitlements */,
+			);
+			path = cam;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3C5A959928CA98A800495D31 /* vipyne */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C5A95A928CA98A900495D31 /* Build configuration list for PBXNativeTarget "vipyne" */;
+			buildPhases = (
+				3C5A959628CA98A800495D31 /* Sources */,
+				3C5A959728CA98A800495D31 /* Frameworks */,
+				3C5A959828CA98A800495D31 /* Resources */,
+				3C5A95BE28CA9B6400495D31 /* Embed System Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C5A95B928CA9B6400495D31 /* PBXTargetDependency */,
+			);
+			name = vipyne;
+			productName = vipyne;
+			productReference = 3C5A959A28CA98A800495D31 /* vipyne.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3C5A95AF28CA9B6400495D31 /* cam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C5A95BB28CA9B6400495D31 /* Build configuration list for PBXNativeTarget "cam" */;
+			buildPhases = (
+				3C5A95AC28CA9B6400495D31 /* Sources */,
+				3C5A95AD28CA9B6400495D31 /* Frameworks */,
+				3C5A95AE28CA9B6400495D31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cam;
+			productName = cam;
+			productReference = 3C5A95B028CA9B6400495D31 /* com.daily.vipyne.cam.systemextension */;
+			productType = "com.apple.product-type.system-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3C5A959228CA98A800495D31 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					3C5A959928CA98A800495D31 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					3C5A95AF28CA9B6400495D31 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 3C5A959528CA98A800495D31 /* Build configuration list for PBXProject "vipyne" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3C5A959128CA98A800495D31;
+			productRefGroup = 3C5A959B28CA98A800495D31 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3C5A959928CA98A800495D31 /* vipyne */,
+				3C5A95AF28CA9B6400495D31 /* cam */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3C5A959828CA98A800495D31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C5A95A228CA98A900495D31 /* Assets.xcassets in Resources */,
+				3C5A95A528CA98A900495D31 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C5A95AE28CA9B6400495D31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3C5A959628CA98A800495D31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C5A95A028CA98A800495D31 /* ViewController.swift in Sources */,
+				3C5A959E28CA98A800495D31 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C5A95AC28CA9B6400495D31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C5A95B528CA9B6400495D31 /* main.swift in Sources */,
+				3C5A95B328CA9B6400495D31 /* camProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3C5A95B928CA9B6400495D31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C5A95AF28CA9B6400495D31 /* cam */;
+			targetProxy = 3C5A95B828CA9B6400495D31 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3C5A95A328CA98A900495D31 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C5A95A428CA98A900495D31 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3C5A95A728CA98A900495D31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3C5A95A828CA98A900495D31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		3C5A95AA28CA98A900495D31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = vipyne/vipyne.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = EEBGKV9N3N;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daily.vipyne;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3C5A95AB28CA98A900495D31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = vipyne/vipyne.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = EEBGKV9N3N;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daily.vipyne;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		3C5A95BC28CA9B6400495D31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = cam/cam.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = EEBGKV9N3N;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = cam/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = cam;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSSystemExtensionUsageDescription = "vipyne kinda made a virtual camera";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daily.vipyne.cam;
+				PRODUCT_NAME = "$(inherited)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3C5A95BD28CA9B6400495D31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = cam/cam.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = EEBGKV9N3N;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = cam/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = cam;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSSystemExtensionUsageDescription = "vipyne kinda made a virtual camera";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daily.vipyne.cam;
+				PRODUCT_NAME = "$(inherited)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3C5A959528CA98A800495D31 /* Build configuration list for PBXProject "vipyne" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C5A95A728CA98A900495D31 /* Debug */,
+				3C5A95A828CA98A900495D31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C5A95A928CA98A900495D31 /* Build configuration list for PBXNativeTarget "vipyne" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C5A95AA28CA98A900495D31 /* Debug */,
+				3C5A95AB28CA98A900495D31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C5A95BB28CA9B6400495D31 /* Build configuration list for PBXNativeTarget "cam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C5A95BC28CA9B6400495D31 /* Debug */,
+				3C5A95BD28CA9B6400495D31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3C5A959228CA98A800495D31 /* Project object */;
+}
