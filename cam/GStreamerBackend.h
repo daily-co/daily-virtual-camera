@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 
-#include "gst/gst.h"
-#include "gst/app/app.h"
+#include <gst/gst.h>
+#include <gst/app/app.h>
 
 @interface GStreamerBackend : NSObject
 
