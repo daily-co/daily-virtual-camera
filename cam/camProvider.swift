@@ -37,14 +37,21 @@ class camDeviceSource: NSObject, CMIOExtensionDeviceSource {
 	private var _whiteStripeStartRow: UInt32 = 0
 	
 	private var _whiteStripeIsAscending: Bool = false
-	
+
+	private var _gstBackend: GStreamerBackend!
+
+	private var _pipeline: String = "videotestsrc ! capsfilter caps=video/x-raw,format=BGRA,width=1280,heigh=720 name=src"
+
 	init(localizedName: String) {
 		
 		super.init()
+
+		self._gstBackend = GStreamerBackend.init(pipeline: _pipeline)
+
 		let deviceID = UUID() // replace this with your device UUID
 		self.device = CMIOExtensionDevice(localizedName: localizedName, deviceID: deviceID, legacyDeviceID: nil, source: self)
 		
-		let dims = CMVideoDimensions(width: 1920, height: 1080)
+		let dims = CMVideoDimensions(width: 1280, height: 720)
 		CMVideoFormatDescriptionCreate(allocator: kCFAllocatorDefault, codecType: kCVPixelFormatType_32BGRA, width: dims.width, height: dims.height, extensions: nil, formatDescriptionOut: &_videoDescription)
 		
 		let pixelBufferAttributes: NSDictionary = [
@@ -117,29 +124,36 @@ class camDeviceSource: NSObject, CMIOExtensionDeviceSource {
 				CVPixelBufferLockBaseAddress(pixelBuffer, [])
 				
 				var bufferPtr = CVPixelBufferGetBaseAddress(pixelBuffer)!
-				let width = CVPixelBufferGetWidth(pixelBuffer)
-				let height = CVPixelBufferGetHeight(pixelBuffer)
-				let rowBytes = CVPixelBufferGetBytesPerRow(pixelBuffer)
-				memset(bufferPtr, 0, rowBytes * height)
 				
-				let whiteStripeStartRow = self._whiteStripeStartRow
-				if self._whiteStripeIsAscending {
-					self._whiteStripeStartRow = whiteStripeStartRow - 1
-					self._whiteStripeIsAscending = self._whiteStripeStartRow > 0
-				}
-				else {
-					self._whiteStripeStartRow = whiteStripeStartRow + 1
-					self._whiteStripeIsAscending = self._whiteStripeStartRow >= (height - kWhiteStripeHeight)
-				}
-				bufferPtr += rowBytes * Int(whiteStripeStartRow)
-				for hi in 0..<kWhiteStripeHeight {
-					for fun in 0..<width {
-						var white: UInt32 = 0x3399CCFF - UInt32(fun * 2) - UInt32(hi)
-						memcpy(bufferPtr, &white, MemoryLayout.size(ofValue: white))
-						bufferPtr += MemoryLayout.size(ofValue: white)
-					}
-				}
-				
+				let data = self._gstBackend.nextFrameBuffer()!
+				data.withUnsafeBytes({
+					let unsafeBufferPtr = $0.bindMemory(to: UInt8.self)
+					memcpy(bufferPtr, unsafeBufferPtr.baseAddress, data.count)
+				})
+
+//				let width = CVPixelBufferGetWidth(pixelBuffer)
+//				let height = CVPixelBufferGetHeight(pixelBuffer)
+//				let rowBytes = CVPixelBufferGetBytesPerRow(pixelBuffer)
+//				memset(bufferPtr, 0, rowBytes * height)
+//
+//				let whiteStripeStartRow = self._whiteStripeStartRow
+//				if self._whiteStripeIsAscending {
+//					self._whiteStripeStartRow = whiteStripeStartRow - 1
+//					self._whiteStripeIsAscending = self._whiteStripeStartRow > 0
+//				}
+//				else {
+//					self._whiteStripeStartRow = whiteStripeStartRow + 1
+//					self._whiteStripeIsAscending = self._whiteStripeStartRow >= (height - kWhiteStripeHeight)
+//				}
+//				bufferPtr += rowBytes * Int(whiteStripeStartRow)
+//				for hi in 0..<kWhiteStripeHeight {
+//					for fun in 0..<width {
+//						var white: UInt32 = 0x3399CCFF - UInt32(fun * 2) - UInt32(hi)
+//						memcpy(bufferPtr, &white, MemoryLayout.size(ofValue: white))
+//						bufferPtr += MemoryLayout.size(ofValue: white)
+//					}
+//				}
+//
 				CVPixelBufferUnlockBaseAddress(pixelBuffer, [])
 				
 				var sbuf: CMSampleBuffer!
