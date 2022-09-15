@@ -40,7 +40,7 @@ $ ffmpeg -f avfoundation -list_devices true -i ""
 ...
 [AVFoundation indev @ 0x7fb15bf05700] AVFoundation video devices:
 [AVFoundation indev @ 0x7fb15bf05700] [0] FaceTime HD Camera (Built-in)
-[AVFoundation indev @ 0x7fb15bf05700] [1] Daily Camera (daily) <========================
+[AVFoundation indev @ 0x7fb15bf05700] [1] Daily Camera (daily.co) <========================
 [AVFoundation indev @ 0x7fb15bf05700] [2] Capture screen 0
 ```
 

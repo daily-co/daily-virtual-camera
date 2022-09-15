@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0475462328D2A9FA002243A6 /* GStreamerBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = 0475462228D2A9FA002243A6 /* GStreamerBackend.m */; };
+		0475462628D2AD42002243A6 /* GStreamer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0475462528D2AD42002243A6 /* GStreamer.framework */; };
+		0475462728D2AD42002243A6 /* GStreamer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0475462528D2AD42002243A6 /* GStreamer.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3C5A959E28CA98A800495D31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5A959D28CA98A800495D31 /* AppDelegate.swift */; };
 		3C5A95A028CA98A800495D31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5A959F28CA98A800495D31 /* ViewController.swift */; };
 		3C5A95A228CA98A900495D31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C5A95A128CA98A900495D31 /* Assets.xcassets */; };
@@ -27,6 +30,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		0475462828D2AD42002243A6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0475462728D2AD42002243A6 /* GStreamer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3C5A95BE28CA9B6400495D31 /* Embed System Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -41,6 +55,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0475462028D2A9FA002243A6 /* cam-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cam-Bridging-Header.h"; sourceTree = "<group>"; };
+		0475462128D2A9FA002243A6 /* GStreamerBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GStreamerBackend.h; sourceTree = "<group>"; };
+		0475462228D2A9FA002243A6 /* GStreamerBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GStreamerBackend.m; sourceTree = "<group>"; };
+		0475462528D2AD42002243A6 /* GStreamer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GStreamer.framework; path = ../../../../../Library/Frameworks/GStreamer.framework; sourceTree = "<group>"; };
 		3C5A959A28CA98A800495D31 /* daily-virtual-camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = daily-virtual-camera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5A959D28CA98A800495D31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C5A959F28CA98A800495D31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,18 +84,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0475462628D2AD42002243A6 /* GStreamer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0475462428D2AD42002243A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0475462528D2AD42002243A6 /* GStreamer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3C5A959128CA98A800495D31 = {
 			isa = PBXGroup;
 			children = (
 				3C5A959C28CA98A800495D31 /* daily-virtual-camera */,
 				3C5A95B128CA9B6400495D31 /* cam */,
 				3C5A959B28CA98A800495D31 /* Products */,
+				0475462428D2AD42002243A6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,10 +133,13 @@
 		3C5A95B128CA9B6400495D31 /* cam */ = {
 			isa = PBXGroup;
 			children = (
+				0475462128D2A9FA002243A6 /* GStreamerBackend.h */,
+				0475462228D2A9FA002243A6 /* GStreamerBackend.m */,
 				3C5A95B228CA9B6400495D31 /* camProvider.swift */,
 				3C5A95B428CA9B6400495D31 /* main.swift */,
 				3C5A95B628CA9B6400495D31 /* Info.plist */,
 				3C5A95B728CA9B6400495D31 /* cam.entitlements */,
+				0475462028D2A9FA002243A6 /* cam-Bridging-Header.h */,
 			);
 			path = cam;
 			sourceTree = "<group>";
@@ -142,6 +173,7 @@
 				3C5A95AC28CA9B6400495D31 /* Sources */,
 				3C5A95AD28CA9B6400495D31 /* Frameworks */,
 				3C5A95AE28CA9B6400495D31 /* Resources */,
+				0475462828D2AD42002243A6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,6 +199,7 @@
 					};
 					3C5A95AF28CA9B6400495D31 = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 					};
 				};
 			};
@@ -223,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C5A95B528CA9B6400495D31 /* main.swift in Sources */,
+				0475462328D2A9FA002243A6 /* GStreamerBackend.m in Sources */,
 				3C5A95B328CA9B6400495D31 /* camProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,11 +455,16 @@
 		3C5A95BC28CA9B6400495D31 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = cam/cam.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = EEBGKV9N3N;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = cam/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = cam;
@@ -442,18 +481,26 @@
 				PRODUCT_NAME = "$(inherited)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "cam/cam-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = /Library/Frameworks/GStreamer.framework/Headers;
 			};
 			name = Debug;
 		};
 		3C5A95BD28CA9B6400495D31 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = cam/cam.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = EEBGKV9N3N;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = cam/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = cam;
@@ -470,7 +517,9 @@
 				PRODUCT_NAME = "$(inherited)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "cam/cam-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = /Library/Frameworks/GStreamer.framework/Headers;
 			};
 			name = Release;
 		};
