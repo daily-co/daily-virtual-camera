@@ -150,7 +150,7 @@ class camDeviceSource: NSObject, CMIOExtensionDeviceSource {
 				
 				var bufferPtr = CVPixelBufferGetBaseAddress(pixelBuffer)!
 				
-				autoreleasepool(invoking: {
+				autoreleasepool {
 					let data = self._gstBackend.nextFrameBuffer()
 					if data != nil {
 						data!.withUnsafeBytes({
@@ -158,7 +158,7 @@ class camDeviceSource: NSObject, CMIOExtensionDeviceSource {
 							memcpy(bufferPtr, unsafeBufferPtr.baseAddress, data!.count)
 						})
 					}
-				})
+				}
 
 //				let width = CVPixelBufferGetWidth(pixelBuffer)
 //				let height = CVPixelBufferGetHeight(pixelBuffer)
