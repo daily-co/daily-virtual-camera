@@ -28,13 +28,15 @@ decodebin_pad_added_cb(GstElement* decodebin, GstPad* new_pad, gpointer user_dat
 
 -(instancetype) initWithPipeline:(NSString *)pipeline
 						   width:(int)width
-						  height:(int)height {
+						  height:(int)height
+					   frameRate:(int)frameRate {
     gst_init(NULL, NULL);
 
     self = [super init];
     if (self) {
 		_width = width;
 		_height = height;
+		_frameRate = frameRate;
 		
 		_pipeline = gst_pipeline_new(NULL);
 		
@@ -56,6 +58,10 @@ decodebin_pad_added_cb(GstElement* decodebin, GstPad* new_pad, gpointer user_dat
 			"format",
 			G_TYPE_STRING,
 			"BGRA",
+			"framerate",
+			GST_TYPE_FRACTION,
+			frameRate,
+			1,
 			"width",
 			G_TYPE_INT,
 			width,
@@ -80,15 +86,28 @@ decodebin_pad_added_cb(GstElement* decodebin, GstPad* new_pad, gpointer user_dat
 -(void) linkPipeline:(GstPad*)new_pad
 {
 	GstElement* queue = gst_element_factory_make("queue", NULL);
+	GstElement* videorate = gst_element_factory_make("videorate", NULL);
+	GstElement* ratefilter = gst_element_factory_make("capsfilter", NULL);
 	GstElement* videoscale = gst_element_factory_make("videoscale", NULL);
 	GstElement* scalefilter = gst_element_factory_make("capsfilter", NULL);
 	GstElement* videoconvert = gst_element_factory_make("videoconvert", NULL);
 	GstElement* convertfilter = gst_element_factory_make("capsfilter", NULL);
 	
-	gst_bin_add_many(GST_BIN(_pipeline), queue, videoscale, scalefilter, videoconvert, convertfilter, NULL);
+	gst_bin_add_many(GST_BIN(_pipeline), queue, videorate, ratefilter, videoscale, scalefilter, videoconvert, convertfilter, NULL);
+
+	// videorate caps
+	GstCaps* caps = gst_caps_new_simple(
+		"video/x-raw",
+		"framerate",
+		GST_TYPE_FRACTION,
+		_frameRate,
+		1,
+		NULL);
+	g_object_set(G_OBJECT(ratefilter), "caps", caps, NULL);
+	gst_caps_unref(caps);
 
 	// videoscale caps
-	GstCaps* caps = gst_caps_new_simple(
+	caps = gst_caps_new_simple(
 		"video/x-raw",
 		"width",
 		G_TYPE_INT,
@@ -114,8 +133,10 @@ decodebin_pad_added_cb(GstElement* decodebin, GstPad* new_pad, gpointer user_dat
 	gst_pad_link(new_pad, sinkpad);
 	gst_object_unref(sinkpad);
 
-	gst_element_link_many(queue, videoscale, scalefilter, videoconvert, convertfilter, GST_ELEMENT(_appsink), NULL);
+	gst_element_link_many(queue, videorate, ratefilter, videoscale, scalefilter, videoconvert, convertfilter, GST_ELEMENT(_appsink), NULL);
 	gst_element_sync_state_with_parent(queue);
+	gst_element_sync_state_with_parent(videorate);
+	gst_element_sync_state_with_parent(ratefilter);
 	gst_element_sync_state_with_parent(videoscale);
 	gst_element_sync_state_with_parent(scalefilter);
 	gst_element_sync_state_with_parent(videoconvert);
