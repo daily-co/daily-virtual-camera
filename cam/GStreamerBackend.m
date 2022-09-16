@@ -50,7 +50,8 @@ decodebin_pad_added_cb(GstElement* decodebin, GstPad* new_pad, gpointer user_dat
 			 (GCallback)decodebin_pad_added_cb,
 			 (__bridge void*) self);
 
-        _appsink = (GstAppSink*)gst_element_factory_make("appsink", NULL);
+		_appsink = (GstAppSink*)gst_element_factory_make("appsink", NULL);
+		g_object_set(G_OBJECT(_appsink), "max-buffers", 30, "drop", TRUE, NULL);
 
 		// appsink caps
 		GstCaps* caps = gst_caps_new_simple(
