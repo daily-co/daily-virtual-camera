@@ -1,0 +1,5 @@
+{
+  "pipeline": "videotestsrc ! capsfilter caps=video/x-raw,width=1280,heigh=720",
+  "width": 1280,
+  "height": 720
+}

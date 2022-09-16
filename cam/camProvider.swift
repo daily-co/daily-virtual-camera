@@ -40,18 +40,33 @@ class camDeviceSource: NSObject, CMIOExtensionDeviceSource {
 
 	private var _gstBackend: GStreamerBackend!
 
-	private var _pipeline: String = "videotestsrc ! capsfilter caps=video/x-raw,format=BGRA,width=1280,heigh=720 name=src"
+	private var _settings: [String: Any]!
+
+	private var _width: Int32 = 1280
+
+	private var _height: Int32 = 720
 
 	init(localizedName: String) {
 		
 		super.init()
 
-		self._gstBackend = GStreamerBackend.init(pipeline: _pipeline)
+		do {
+			self._settings = try self.loadSettings()!;
+
+			let pipeline = self._settings["pipeline"] as? String
+			self._width = self._settings["width"] as! Int32
+			self._height = self._settings["height"] as! Int32
+
+			self._gstBackend = GStreamerBackend.init(pipeline: pipeline, width: self._width, height: self._height)
+		} catch let error {
+			fatalError("Failed to load settings: \(error.localizedDescription)")
+		}
+
 
 		let deviceID = UUID() // replace this with your device UUID
 		self.device = CMIOExtensionDevice(localizedName: localizedName, deviceID: deviceID, legacyDeviceID: nil, source: self)
 		
-		let dims = CMVideoDimensions(width: 1280, height: 720)
+		let dims = CMVideoDimensions(width: self._width, height: self._height)
 		CMVideoFormatDescriptionCreate(allocator: kCFAllocatorDefault, codecType: kCVPixelFormatType_32BGRA, width: dims.width, height: dims.height, extensions: nil, formatDescriptionOut: &_videoDescription)
 		
 		let pixelBufferAttributes: NSDictionary = [
@@ -78,7 +93,14 @@ class camDeviceSource: NSObject, CMIOExtensionDeviceSource {
 		
 		return [.deviceTransportType, .deviceModel]
 	}
-	
+
+	func loadSettings() throws -> [String: Any]? {
+		let settingsPath = Bundle.main.path(forResource: "vipyne", ofType: "json")!
+		let data = FileManager.default.contents(atPath: settingsPath)!
+		let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
+		return jsonObject as? [String: Any]
+	}
+
 	func deviceProperties(forProperties properties: Set<CMIOExtensionProperty>) throws -> CMIOExtensionDeviceProperties {
 		
 		let deviceProperties = CMIOExtensionDeviceProperties(dictionary: [:])
@@ -125,11 +147,13 @@ class camDeviceSource: NSObject, CMIOExtensionDeviceSource {
 				
 				var bufferPtr = CVPixelBufferGetBaseAddress(pixelBuffer)!
 				
-				let data = self._gstBackend.nextFrameBuffer()!
-				data.withUnsafeBytes({
-					let unsafeBufferPtr = $0.bindMemory(to: UInt8.self)
-					memcpy(bufferPtr, unsafeBufferPtr.baseAddress, data.count)
-				})
+				let data = self._gstBackend.nextFrameBuffer()
+				if data != nil {
+					data!.withUnsafeBytes({
+						let unsafeBufferPtr = $0.bindMemory(to: UInt8.self)
+						memcpy(bufferPtr, unsafeBufferPtr.baseAddress, data!.count)
+					})
+				}
 
 //				let width = CVPixelBufferGetWidth(pixelBuffer)
 //				let height = CVPixelBufferGetHeight(pixelBuffer)
