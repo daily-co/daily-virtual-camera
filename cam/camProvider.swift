@@ -131,7 +131,7 @@ class camDeviceSource: NSObject, CMIOExtensionDeviceSource {
 		_streamingCounter += 1
 		
 		_timer = DispatchSource.makeTimerSource(flags: .strict, queue: _timerQueue)
-			_timer!.schedule(deadline: .now(), repeating: Double(1/self._frameRate), leeway: .seconds(0))
+		_timer!.schedule(deadline: .now(), repeating: Double(1/self._frameRate), leeway: .seconds(0))
 		
 		_timer!.setEventHandler {
 			
