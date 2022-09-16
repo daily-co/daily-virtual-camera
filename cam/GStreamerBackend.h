@@ -9,13 +9,16 @@
 
 @property int height;
 
+@property int frameRate;
+
 @property GstElement *pipeline;
 
 @property GstAppSink *appsink;
 
 -(instancetype) initWithPipeline:(NSString *)pipeline
 						   width:(int)width
-						  height:(int)height;
+						  height:(int)height
+					   frameRate:(int)frameRate;
 
 -(void) linkPipeline:(GstPad*)new_pad;
 

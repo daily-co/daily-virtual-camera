@@ -46,6 +46,8 @@ class camDeviceSource: NSObject, CMIOExtensionDeviceSource {
 
 	private var _height: Int32 = 720
 
+	private var _frameRate: Int32 = 30
+
 	init(localizedName: String) {
 		
 		super.init()
@@ -56,8 +58,9 @@ class camDeviceSource: NSObject, CMIOExtensionDeviceSource {
 			let pipeline = self._settings["pipeline"] as? String
 			self._width = self._settings["width"] as! Int32
 			self._height = self._settings["height"] as! Int32
+			self._frameRate = self._settings["frameRate"] as! Int32
 
-			self._gstBackend = GStreamerBackend.init(pipeline: pipeline, width: self._width, height: self._height)
+			self._gstBackend = GStreamerBackend.init(pipeline: pipeline, width: self._width, height: self._height, frameRate: self._frameRate)
 		} catch let error {
 			fatalError("Failed to load settings: \(error.localizedDescription)")
 		}
@@ -77,7 +80,7 @@ class camDeviceSource: NSObject, CMIOExtensionDeviceSource {
 		]
 		CVPixelBufferPoolCreate(kCFAllocatorDefault, nil, pixelBufferAttributes, &_bufferPool)
 		
-		let videoStreamFormat = CMIOExtensionStreamFormat.init(formatDescription: _videoDescription, maxFrameDuration: CMTime(value: 1, timescale: Int32(kFrameRate)), minFrameDuration: CMTime(value: 1, timescale: Int32(kFrameRate)), validFrameDurations: nil)
+		let videoStreamFormat = CMIOExtensionStreamFormat.init(formatDescription: _videoDescription, maxFrameDuration: CMTime(value: 1, timescale: self._frameRate), minFrameDuration: CMTime(value: 1, timescale: self._frameRate), validFrameDurations: nil)
 		_bufferAuxAttributes = [kCVPixelBufferPoolAllocationThresholdKey: 5]
 		
 		let videoID = UUID() // replace this with your video UUID
@@ -128,7 +131,7 @@ class camDeviceSource: NSObject, CMIOExtensionDeviceSource {
 		_streamingCounter += 1
 		
 		_timer = DispatchSource.makeTimerSource(flags: .strict, queue: _timerQueue)
-		_timer!.schedule(deadline: .now(), repeating: Double(1/kFrameRate), leeway: .seconds(0))
+			_timer!.schedule(deadline: .now(), repeating: Double(1/self._frameRate), leeway: .seconds(0))
 		
 		_timer!.setEventHandler {
 			
@@ -258,8 +261,7 @@ class camStreamSource: NSObject, CMIOExtensionStreamSource {
 			streamProperties.activeFormatIndex = 0
 		}
 		if properties.contains(.streamFrameDuration) {
-			let frameDuration = CMTime(value: 1, timescale: Int32(kFrameRate))
-			streamProperties.frameDuration = frameDuration
+			streamProperties.frameDuration = self._streamFormat.maxFrameDuration
 		}
 		
 		return streamProperties
