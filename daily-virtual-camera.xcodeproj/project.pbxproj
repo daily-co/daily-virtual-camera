@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0475462328D2A9FA002243A6 /* GStreamerBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = 0475462228D2A9FA002243A6 /* GStreamerBackend.m */; };
 		0475462C28D2E336002243A6 /* GStreamer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0475462528D2AD42002243A6 /* GStreamer.framework */; };
+		04E38DAB28D44A5E00744B02 /* vipyne.json in Resources */ = {isa = PBXBuildFile; fileRef = 04E38DAA28D44A5E00744B02 /* vipyne.json */; };
 		3C5A959E28CA98A800495D31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5A959D28CA98A800495D31 /* AppDelegate.swift */; };
 		3C5A95A028CA98A800495D31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5A959F28CA98A800495D31 /* ViewController.swift */; };
 		3C5A95A228CA98A900495D31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C5A95A128CA98A900495D31 /* Assets.xcassets */; };
@@ -87,6 +88,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		04E38DA828D44A0200744B02 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04E38DAA28D44A5E00744B02 /* vipyne.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		3C5A959128CA98A800495D31 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +130,7 @@
 		3C5A95B128CA9B6400495D31 /* cam */ = {
 			isa = PBXGroup;
 			children = (
+				04E38DA828D44A0200744B02 /* Resources */,
 				0475462128D2A9FA002243A6 /* GStreamerBackend.h */,
 				0475462228D2A9FA002243A6 /* GStreamerBackend.m */,
 				3C5A95B228CA9B6400495D31 /* camProvider.swift */,
@@ -223,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E38DAB28D44A5E00744B02 /* vipyne.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

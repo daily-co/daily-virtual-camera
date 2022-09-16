@@ -5,13 +5,19 @@
 
 @interface GStreamerBackend : NSObject
 
-@property NSString *pipelineStr;
+@property int width;
+
+@property int height;
 
 @property GstElement *pipeline;
 
 @property GstAppSink *appsink;
 
--(instancetype) initWithPipeline:(NSString *)pipeline;
+-(instancetype) initWithPipeline:(NSString *)pipeline
+						   width:(int)width
+						  height:(int)height;
+
+-(void) linkPipeline:(GstPad*)new_pad;
 
 -(NSData*) nextFrameBuffer;
 
