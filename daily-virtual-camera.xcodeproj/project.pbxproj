@@ -284,7 +284,7 @@
 		3C5A95A728CA98A900495D31 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -297,7 +297,7 @@
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -344,7 +344,7 @@
 		3C5A95A828CA98A900495D31 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -357,7 +357,7 @@
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -473,7 +473,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				"LIBRARY_SEARCH_PATHS[arch=*]" = /Library/Frameworks/GStreamer.framework/Versions/1.0/lib;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /Library/Frameworks/GStreamer.framework/Libraries;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = co.daily.daily-virtual-camera.cam;
@@ -483,7 +483,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "cam/cam-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				"USER_HEADER_SEARCH_PATHS[arch=*]" = /Library/Frameworks/GStreamer.framework/Headers;
+				"SYSTEM_HEADER_SEARCH_PATHS[arch=*]" = /Library/Frameworks/GStreamer.framework/Headers;
 			};
 			name = Debug;
 		};
@@ -510,7 +510,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				"LIBRARY_SEARCH_PATHS[arch=*]" = /Library/Frameworks/GStreamer.framework/Versions/1.0/lib;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /Library/Frameworks/GStreamer.framework/Libraries;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = co.daily.daily-virtual-camera.cam;
@@ -519,7 +519,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "cam/cam-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				"USER_HEADER_SEARCH_PATHS[arch=*]" = /Library/Frameworks/GStreamer.framework/Headers;
+				"SYSTEM_HEADER_SEARCH_PATHS[arch=*]" = /Library/Frameworks/GStreamer.framework/Headers;
 			};
 			name = Release;
 		};
