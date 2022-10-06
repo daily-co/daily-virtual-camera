@@ -13,7 +13,7 @@
 		3C5A95A528CA98A900495D31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5A95A328CA98A900495D31 /* Main.storyboard */; };
 		3C5A95B328CA9B6400495D31 /* camProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5A95B228CA9B6400495D31 /* camProvider.swift */; };
 		3C5A95B528CA9B6400495D31 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5A95B428CA9B6400495D31 /* main.swift */; };
-		3C5A95BA28CA9B6400495D31 /* com.daily.vipyne.cam.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = 3C5A95B028CA9B6400495D31 /* com.daily.vipyne.cam.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3C5A95BA28CA9B6400495D31 /* co.daily.daily-virtual-camera.cam.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = 3C5A95B028CA9B6400495D31 /* co.daily.daily-virtual-camera.cam.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +33,7 @@
 			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
 			dstSubfolderSpec = 16;
 			files = (
-				3C5A95BA28CA9B6400495D31 /* com.daily.vipyne.cam.systemextension in Embed System Extensions */,
+				3C5A95BA28CA9B6400495D31 /* co.daily.daily-virtual-camera.cam.systemextension in Embed System Extensions */,
 			);
 			name = "Embed System Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,13 +41,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3C5A959A28CA98A800495D31 /* vipyne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vipyne.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C5A959A28CA98A800495D31 /* daily-virtual-camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = daily-virtual-camera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5A959D28CA98A800495D31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C5A959F28CA98A800495D31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3C5A95A128CA98A900495D31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C5A95A428CA98A900495D31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3C5A95A628CA98A900495D31 /* vipyne.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = vipyne.entitlements; sourceTree = "<group>"; };
-		3C5A95B028CA9B6400495D31 /* com.daily.vipyne.cam.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = com.daily.vipyne.cam.systemextension; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C5A95A628CA98A900495D31 /* daily-virtual-camera.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = daily-virtual-camera.entitlements; sourceTree = "<group>"; };
+		3C5A95B028CA9B6400495D31 /* co.daily.daily-virtual-camera.cam.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = co.daily.daily-virtual-camera.cam.systemextension; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5A95B228CA9B6400495D31 /* camProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = camProvider.swift; sourceTree = "<group>"; };
 		3C5A95B428CA9B6400495D31 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3C5A95B628CA9B6400495D31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 		3C5A959128CA98A800495D31 = {
 			isa = PBXGroup;
 			children = (
-				3C5A959C28CA98A800495D31 /* vipyne */,
+				3C5A959C28CA98A800495D31 /* daily-virtual-camera */,
 				3C5A95B128CA9B6400495D31 /* cam */,
 				3C5A959B28CA98A800495D31 /* Products */,
 			);
@@ -84,22 +84,22 @@
 		3C5A959B28CA98A800495D31 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3C5A959A28CA98A800495D31 /* vipyne.app */,
-				3C5A95B028CA9B6400495D31 /* com.daily.vipyne.cam.systemextension */,
+				3C5A959A28CA98A800495D31 /* daily-virtual-camera.app */,
+				3C5A95B028CA9B6400495D31 /* co.daily.daily-virtual-camera.cam.systemextension */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3C5A959C28CA98A800495D31 /* vipyne */ = {
+		3C5A959C28CA98A800495D31 /* daily-virtual-camera */ = {
 			isa = PBXGroup;
 			children = (
 				3C5A959D28CA98A800495D31 /* AppDelegate.swift */,
 				3C5A959F28CA98A800495D31 /* ViewController.swift */,
 				3C5A95A128CA98A900495D31 /* Assets.xcassets */,
 				3C5A95A328CA98A900495D31 /* Main.storyboard */,
-				3C5A95A628CA98A900495D31 /* vipyne.entitlements */,
+				3C5A95A628CA98A900495D31 /* daily-virtual-camera.entitlements */,
 			);
-			path = vipyne;
+			path = daily-virtual-camera;
 			sourceTree = "<group>";
 		};
 		3C5A95B128CA9B6400495D31 /* cam */ = {
@@ -116,9 +116,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3C5A959928CA98A800495D31 /* vipyne */ = {
+		3C5A959928CA98A800495D31 /* daily-virtual-camera */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3C5A95A928CA98A900495D31 /* Build configuration list for PBXNativeTarget "vipyne" */;
+			buildConfigurationList = 3C5A95A928CA98A900495D31 /* Build configuration list for PBXNativeTarget "daily-virtual-camera" */;
 			buildPhases = (
 				3C5A959628CA98A800495D31 /* Sources */,
 				3C5A959728CA98A800495D31 /* Frameworks */,
@@ -130,9 +130,9 @@
 			dependencies = (
 				3C5A95B928CA9B6400495D31 /* PBXTargetDependency */,
 			);
-			name = vipyne;
-			productName = vipyne;
-			productReference = 3C5A959A28CA98A800495D31 /* vipyne.app */;
+			name = daily-virtual-camera;
+			productName = daily-virtual-camera;
+			productReference = 3C5A959A28CA98A800495D31 /* daily-virtual-camera.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3C5A95AF28CA9B6400495D31 /* cam */ = {
@@ -149,7 +149,7 @@
 			);
 			name = cam;
 			productName = cam;
-			productReference = 3C5A95B028CA9B6400495D31 /* com.daily.vipyne.cam.systemextension */;
+			productReference = 3C5A95B028CA9B6400495D31 /* co.daily.daily-virtual-camera.cam.systemextension */;
 			productType = "com.apple.product-type.system-extension";
 		};
 /* End PBXNativeTarget section */
@@ -170,7 +170,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3C5A959528CA98A800495D31 /* Build configuration list for PBXProject "vipyne" */;
+			buildConfigurationList = 3C5A959528CA98A800495D31 /* Build configuration list for PBXProject "daily-virtual-camera" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -183,7 +183,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3C5A959928CA98A800495D31 /* vipyne */,
+				3C5A959928CA98A800495D31 /* daily-virtual-camera */,
 				3C5A95AF28CA9B6400495D31 /* cam */,
 			);
 		};
@@ -368,7 +368,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = vipyne/vipyne.entitlements;
+				CODE_SIGN_ENTITLEMENTS = daily-virtual-camera/daily-virtual-camera.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -383,7 +383,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.daily.vipyne;
+				PRODUCT_BUNDLE_IDENTIFIER = co.daily.daily-virtual-camera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -396,7 +396,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = vipyne/vipyne.entitlements;
+				CODE_SIGN_ENTITLEMENTS = daily-virtual-camera/daily-virtual-camera.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -411,7 +411,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.daily.vipyne;
+				PRODUCT_BUNDLE_IDENTIFIER = co.daily.daily-virtual-camera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -430,7 +430,7 @@
 				INFOPLIST_FILE = cam/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = cam;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSSystemExtensionUsageDescription = "vipyne kinda made a virtual camera";
+				INFOPLIST_KEY_NSSystemExtensionUsageDescription = "daily-virtual-camera kinda made a virtual camera";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -438,7 +438,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.daily.vipyne.cam;
+				PRODUCT_BUNDLE_IDENTIFIER = co.daily.daily-virtual-camera.cam;
 				PRODUCT_NAME = "$(inherited)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -458,7 +458,7 @@
 				INFOPLIST_FILE = cam/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = cam;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSSystemExtensionUsageDescription = "vipyne kinda made a virtual camera";
+				INFOPLIST_KEY_NSSystemExtensionUsageDescription = "daily-virtual-camera kinda made a virtual camera";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -466,7 +466,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.daily.vipyne.cam;
+				PRODUCT_BUNDLE_IDENTIFIER = co.daily.daily-virtual-camera.cam;
 				PRODUCT_NAME = "$(inherited)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -477,7 +477,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3C5A959528CA98A800495D31 /* Build configuration list for PBXProject "vipyne" */ = {
+		3C5A959528CA98A800495D31 /* Build configuration list for PBXProject "daily-virtual-camera" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3C5A95A728CA98A900495D31 /* Debug */,
@@ -486,7 +486,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3C5A95A928CA98A900495D31 /* Build configuration list for PBXNativeTarget "vipyne" */ = {
+		3C5A95A928CA98A900495D31 /* Build configuration list for PBXNativeTarget "daily-virtual-camera" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3C5A95AA28CA98A900495D31 /* Debug */,

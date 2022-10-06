@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  vipyne
+//  daily-virtual-camera
 //
 //  Created by vanessa pyne on 9/8/22.
 //

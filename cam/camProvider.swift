@@ -12,7 +12,7 @@ import os.log
 
 let kWhiteStripeHeight: Int = 50
 let kFrameRate: Int = 60
-let myCameraName = "viRTUALpyne camera"
+let myCameraName = "Daily Camera"
 
 // MARK: -
 
@@ -270,7 +270,7 @@ class camProviderSource: NSObject, CMIOExtensionProviderSource {
 		super.init()
 		
 		provider = CMIOExtensionProvider(source: self, clientQueue: clientQueue)
-		deviceSource = camDeviceSource(localizedName: "\(myCameraName) (vipyne)")
+		deviceSource = camDeviceSource(localizedName: "\(myCameraName) (daily.co)")
 		
 		do {
 			try provider.addDevice(deviceSource.device)

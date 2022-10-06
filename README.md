@@ -9,16 +9,16 @@ More info on developing camera extensions can be found [here](https://developer.
 To build the extension in xcode, you need for realsies apple dev team credentials ie "Pluot Communications, Inc"
 
 ## installation
-1. open `vipyne.xcodeproj` in xcode
+1. open `daily-virtual-camera.xcodeproj` in xcode
 2. build app
 <img src="./readme-images/build.png" width="500">
 3. copy app from build directory to `/Applications`
 <img src="./readme-images/showbuild.png" width="500">
 
 ```
- $ cp $HOME/Library/Developer/Xcode/DerivedData/vipyne-.../Build/Products/Debug/vipyne.app /Applications
+ $ cp $HOME/Library/Developer/Xcode/DerivedData/daily-virtual-camera-.../Build/Products/Debug/daily-virtual-camera.app /Applications
 ```
-4. open vipyne.app from /Applications and click install virtual camera
+4. open daily-virtual-camera.app from /Applications and click install virtual camera
 6. follow prompts to allow installation
 <img src="./readme-images/needs.png" width="500">
 <img src="./readme-images/blocked.png" width="300">
@@ -31,28 +31,25 @@ $ systemextensionsctl list
 1 extension(s)
 --- com.apple.system_extension.cmio
 enabled active  teamID  bundleID (version)  name  [state]
-* * EEBGKV9N3N  com.daily.vipyne.cam (1.0/1)  cam [activated enabled]
+* * EEBGKV9N3N  co.daily.daily-virtual-camera.cam (1.0/1)  cam [activated enabled]
 ```
 
 ```
 $ ffmpeg -f avfoundation -list_devices true -i "" 
 ...
 [AVFoundation indev @ 0x7fb15bf05700] AVFoundation video devices:
-[AVFoundation indev @ 0x7fb15bf05700] [0] mmhmm Camera
-[AVFoundation indev @ 0x7fb15bf05700] [1] FaceTime HD Camera (Built-in)
-[AVFoundation indev @ 0x7fb15bf05700] [2] viRTUALpyne cam 2 (vipyne) <========================
-[AVFoundation indev @ 0x7fb15bf05700] [3] CMIOMinimalSample Device
-[AVFoundation indev @ 0x7fb15bf05700] [4] Reincubate Camo
-[AVFoundation indev @ 0x7fb15bf05700] [5] Capture screen 0
+[AVFoundation indev @ 0x7fb15bf05700] [0] FaceTime HD Camera (Built-in)
+[AVFoundation indev @ 0x7fb15bf05700] [1] Daily Camera (daily) <========================
+[AVFoundation indev @ 0x7fb15bf05700] [2] Capture screen 0
 ```
 <img src="./readme-images/devs.png" width="300">
 
 ## usage (recommended)
 
-* [update the camera name](https://github.com/vipyne/macos-camera-extension/blob/main/browserConsoleSnippet.js#L42) if changed
-* use [the javascript snippet](https://github.com/vipyne/macos-camera-extension/blob/main/browserConsoleSnippet.js) in your browser console.
+* [update the camera name](https://github.com/daily-virtual-camera/macos-camera-extension/blob/main/browserConsoleSnippet.js#L42) if changed
+* use [the javascript snippet](https://github.com/daily-virtual-camera/macos-camera-extension/blob/main/browserConsoleSnippet.js) in your browser console.
 * optional: pass in different fake media
-* `await initGUM('my camera name (vipyne)', 'https://bestfakemedia.biz/faux.mp4')`
+* `await initGUM('my camera name (daily-virtual-camera)', 'https://bestfakemedia.biz/faux.mp4')`
 
 <img src="./readme-images/kitten.png" width="500">
 
@@ -65,10 +62,10 @@ $ systemextensionsctl list
 1 extension(s)
 --- com.apple.system_extension.cmio
 enabled active  teamID  bundleID (version)  name  [state]
-    EEBGKV9N3N  com.daily.vipyne.cam (1.0/1)  cam [terminated waiting to uninstall on reboot]
+    EEBGKV9N3N  co.daily.daily-virtual-camera.cam (1.0/1)  cam [terminated waiting to uninstall on reboot]
 ```
 
 
 ## development
 
-If you want to generate your own fake media within the app [camProvider.swift](https://github.com/vipyne/macos-camera-extension/blob/main/cam/camProvider.swift#L93-L160) is where you can change the [camera name](https://github.com/vipyne/macos-camera-extension/blob/main/cam/camProvider.swift#L15) and do more interesting camera things... Go wild. Godspeed.
+If you want to generate your own fake media within the app [camProvider.swift](https://github.com/daily-virtual-camera/macos-camera-extension/blob/main/cam/camProvider.swift#L93-L160) is where you can change the [camera name](https://github.com/daily-virtual-camera/macos-camera-extension/blob/main/cam/camProvider.swift#L15) and do more interesting camera things... Go wild. Godspeed.
