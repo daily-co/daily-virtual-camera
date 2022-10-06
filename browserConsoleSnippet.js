@@ -39,4 +39,4 @@ async function initGUM(fakeCameraName, fakeMedia) {
   );
   console.log('____fake camera and media initialzed 🎥 ✔️');
 }
-await initGUM('viRTUALpyne camera (vipyne)');
+await initGUM('Daily Camera (daily)');
