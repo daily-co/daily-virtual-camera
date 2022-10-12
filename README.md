@@ -6,8 +6,8 @@ This is an implementation of camera extension app (as shown in [this WWDC video]
 More info on developing camera extensions can be found [here](https://developer.apple.com/documentation/coremediaio/creating_a_camera_extension_with_core_media_i_o).
 
 ## requirements
-To build the extension in xcode, you need apple dev team credentials.
-
+- apple dev team credentials
+- [gstreamer (>= 1.21.1)](https://gstreamer.freedesktop.org/pkg/osx/1.21.1/)
 
 ## installation
 1. open `daily-virtual-camera.xcodeproj` in xcode
