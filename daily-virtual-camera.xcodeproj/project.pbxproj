@@ -9,14 +9,22 @@
 /* Begin PBXBuildFile section */
 		0475462328D2A9FA002243A6 /* GStreamerBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = 0475462228D2A9FA002243A6 /* GStreamerBackend.m */; };
 		0475462C28D2E336002243A6 /* GStreamer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0475462528D2AD42002243A6 /* GStreamer.framework */; };
-		04E38DAB28D44A5E00744B02 /* vipyne.json in Resources */ = {isa = PBXBuildFile; fileRef = 04E38DAA28D44A5E00744B02 /* vipyne.json */; };
+		04E38DAB28D44A5E00744B02 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		3C5A959E28CA98A800495D31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5A959D28CA98A800495D31 /* AppDelegate.swift */; };
 		3C5A95A028CA98A800495D31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5A959F28CA98A800495D31 /* ViewController.swift */; };
 		3C5A95A228CA98A900495D31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C5A95A128CA98A900495D31 /* Assets.xcassets */; };
 		3C5A95A528CA98A900495D31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5A95A328CA98A900495D31 /* Main.storyboard */; };
-		3C5A95B328CA9B6400495D31 /* camProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5A95B228CA9B6400495D31 /* camProvider.swift */; };
+		3C5A95B328CA9B6400495D31 /* DeviceSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5A95B228CA9B6400495D31 /* DeviceSource.swift */; };
 		3C5A95B528CA9B6400495D31 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5A95B428CA9B6400495D31 /* main.swift */; };
 		3C5A95BA28CA9B6400495D31 /* co.daily.daily-virtual-camera.cam.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = 3C5A95B028CA9B6400495D31 /* co.daily.daily-virtual-camera.cam.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CA50843728F6CE040027D533 /* ProviderSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA50843628F6CE040027D533 /* ProviderSource.swift */; };
+		CA50843928F6CE2A0027D533 /* StreamSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA50843828F6CE2A0027D533 /* StreamSource.swift */; };
+		CA50844228F70ABF0027D533 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = CA50844128F70ABF0027D533 /* Logging */; };
+		CA50844428F7207C0027D533 /* VirtualCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA50844328F7207C0027D533 /* VirtualCamera.swift */; };
+		CA50844628F728820027D533 /* VirtualCameraError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA50844528F728820027D533 /* VirtualCameraError.swift */; };
+		CA50844828F72E5A0027D533 /* FrameSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA50844728F72E5A0027D533 /* FrameSource.swift */; };
+		CA50844A28F733320027D533 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA50844928F733320027D533 /* UserDefaults+Extensions.swift */; };
+		CA5084A6290188FE0027D533 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = CA5084A5290188FE0027D533 /* Logging */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,17 +56,23 @@
 		0475462128D2A9FA002243A6 /* GStreamerBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GStreamerBackend.h; sourceTree = "<group>"; };
 		0475462228D2A9FA002243A6 /* GStreamerBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GStreamerBackend.m; sourceTree = "<group>"; };
 		0475462528D2AD42002243A6 /* GStreamer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GStreamer.framework; path = ../../../../../Library/Frameworks/GStreamer.framework; sourceTree = "<group>"; };
-		3C5A959A28CA98A800495D31 /* daily-virtual-camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = daily-virtual-camera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C5A959A28CA98A800495D31 /* Daily Virtual Camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Virtual Camera.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5A959D28CA98A800495D31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C5A959F28CA98A800495D31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3C5A95A128CA98A900495D31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C5A95A428CA98A900495D31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3C5A95A628CA98A900495D31 /* daily-virtual-camera.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = daily-virtual-camera.entitlements; sourceTree = "<group>"; };
-		3C5A95B028CA9B6400495D31 /* co.daily.daily-virtual-camera.cam.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = co.daily.daily-virtual-camera.cam.systemextension; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C5A95B228CA9B6400495D31 /* camProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = camProvider.swift; sourceTree = "<group>"; };
+		3C5A95A628CA98A900495D31 /* daily-virtual-camera.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "daily-virtual-camera.entitlements"; sourceTree = "<group>"; };
+		3C5A95B028CA9B6400495D31 /* co.daily.daily-virtual-camera.cam.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = "co.daily.daily-virtual-camera.cam.systemextension"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C5A95B228CA9B6400495D31 /* DeviceSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSource.swift; sourceTree = "<group>"; };
 		3C5A95B428CA9B6400495D31 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3C5A95B628CA9B6400495D31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C5A95B728CA9B6400495D31 /* cam.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = cam.entitlements; sourceTree = "<group>"; };
+		CA50843628F6CE040027D533 /* ProviderSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderSource.swift; sourceTree = "<group>"; };
+		CA50843828F6CE2A0027D533 /* StreamSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamSource.swift; sourceTree = "<group>"; };
+		CA50844328F7207C0027D533 /* VirtualCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualCamera.swift; sourceTree = "<group>"; };
+		CA50844528F728820027D533 /* VirtualCameraError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualCameraError.swift; sourceTree = "<group>"; };
+		CA50844728F72E5A0027D533 /* FrameSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameSource.swift; sourceTree = "<group>"; };
+		CA50844928F733320027D533 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA5084A6290188FE0027D533 /* Logging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA50844228F70ABF0027D533 /* Logging in Frameworks */,
 				0475462C28D2E336002243A6 /* GStreamer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,14 +104,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		04E38DA828D44A0200744B02 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				04E38DAA28D44A5E00744B02 /* vipyne.json */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		3C5A959128CA98A800495D31 = {
 			isa = PBXGroup;
 			children = (
@@ -109,7 +117,7 @@
 		3C5A959B28CA98A800495D31 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3C5A959A28CA98A800495D31 /* daily-virtual-camera.app */,
+				3C5A959A28CA98A800495D31 /* Daily Virtual Camera.app */,
 				3C5A95B028CA9B6400495D31 /* co.daily.daily-virtual-camera.cam.systemextension */,
 			);
 			name = Products;
@@ -124,20 +132,25 @@
 				3C5A95A328CA98A900495D31 /* Main.storyboard */,
 				3C5A95A628CA98A900495D31 /* daily-virtual-camera.entitlements */,
 			);
-			path = daily-virtual-camera;
+			path = "daily-virtual-camera";
 			sourceTree = "<group>";
 		};
 		3C5A95B128CA9B6400495D31 /* cam */ = {
 			isa = PBXGroup;
 			children = (
-				04E38DA828D44A0200744B02 /* Resources */,
 				0475462128D2A9FA002243A6 /* GStreamerBackend.h */,
 				0475462228D2A9FA002243A6 /* GStreamerBackend.m */,
-				3C5A95B228CA9B6400495D31 /* camProvider.swift */,
+				CA50844528F728820027D533 /* VirtualCameraError.swift */,
+				CA50844328F7207C0027D533 /* VirtualCamera.swift */,
+				3C5A95B228CA9B6400495D31 /* DeviceSource.swift */,
+				CA50843828F6CE2A0027D533 /* StreamSource.swift */,
+				CA50843628F6CE040027D533 /* ProviderSource.swift */,
+				CA50844728F72E5A0027D533 /* FrameSource.swift */,
 				3C5A95B428CA9B6400495D31 /* main.swift */,
 				3C5A95B628CA9B6400495D31 /* Info.plist */,
 				3C5A95B728CA9B6400495D31 /* cam.entitlements */,
 				0475462028D2A9FA002243A6 /* cam-Bridging-Header.h */,
+				CA50844928F733320027D533 /* UserDefaults+Extensions.swift */,
 			);
 			path = cam;
 			sourceTree = "<group>";
@@ -145,9 +158,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3C5A959928CA98A800495D31 /* daily-virtual-camera */ = {
+		3C5A959928CA98A800495D31 /* Daily Virtual Camera */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3C5A95A928CA98A900495D31 /* Build configuration list for PBXNativeTarget "daily-virtual-camera" */;
+			buildConfigurationList = 3C5A95A928CA98A900495D31 /* Build configuration list for PBXNativeTarget "Daily Virtual Camera" */;
 			buildPhases = (
 				3C5A959628CA98A800495D31 /* Sources */,
 				3C5A959728CA98A800495D31 /* Frameworks */,
@@ -159,9 +172,12 @@
 			dependencies = (
 				3C5A95B928CA9B6400495D31 /* PBXTargetDependency */,
 			);
-			name = daily-virtual-camera;
-			productName = daily-virtual-camera;
-			productReference = 3C5A959A28CA98A800495D31 /* daily-virtual-camera.app */;
+			name = "Daily Virtual Camera";
+			packageProductDependencies = (
+				CA5084A5290188FE0027D533 /* Logging */,
+			);
+			productName = "daily-virtual-camera";
+			productReference = 3C5A959A28CA98A800495D31 /* Daily Virtual Camera.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3C5A95AF28CA9B6400495D31 /* cam */ = {
@@ -177,6 +193,9 @@
 			dependencies = (
 			);
 			name = cam;
+			packageProductDependencies = (
+				CA50844128F70ABF0027D533 /* Logging */,
+			);
 			productName = cam;
 			productReference = 3C5A95B028CA9B6400495D31 /* co.daily.daily-virtual-camera.cam.systemextension */;
 			productType = "com.apple.product-type.system-extension";
@@ -209,11 +228,14 @@
 				Base,
 			);
 			mainGroup = 3C5A959128CA98A800495D31;
+			packageReferences = (
+				CA50843E28F70AB10027D533 /* XCRemoteSwiftPackageReference "swift-log" */,
+			);
 			productRefGroup = 3C5A959B28CA98A800495D31 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3C5A959928CA98A800495D31 /* daily-virtual-camera */,
+				3C5A959928CA98A800495D31 /* Daily Virtual Camera */,
 				3C5A95AF28CA9B6400495D31 /* cam */,
 			);
 		};
@@ -233,7 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04E38DAB28D44A5E00744B02 /* vipyne.json in Resources */,
+				04E38DAB28D44A5E00744B02 /* (null) in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,9 +275,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA50844628F728820027D533 /* VirtualCameraError.swift in Sources */,
 				3C5A95B528CA9B6400495D31 /* main.swift in Sources */,
 				0475462328D2A9FA002243A6 /* GStreamerBackend.m in Sources */,
-				3C5A95B328CA9B6400495D31 /* camProvider.swift in Sources */,
+				3C5A95B328CA9B6400495D31 /* DeviceSource.swift in Sources */,
+				CA50844828F72E5A0027D533 /* FrameSource.swift in Sources */,
+				CA50843928F6CE2A0027D533 /* StreamSource.swift in Sources */,
+				CA50844A28F733320027D533 /* UserDefaults+Extensions.swift in Sources */,
+				CA50844428F7207C0027D533 /* VirtualCamera.swift in Sources */,
+				CA50843728F6CE040027D533 /* ProviderSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,13 +428,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = daily-virtual-camera/daily-virtual-camera.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "daily-virtual-camera/daily-virtual-camera.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = EEBGKV9N3N;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Daily Virtual Camera";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -415,7 +444,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = co.daily.daily-virtual-camera;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.daily.daily-virtual-camera";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -428,13 +457,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = daily-virtual-camera/daily-virtual-camera.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "daily-virtual-camera/daily-virtual-camera.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = EEBGKV9N3N;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Daily Virtual Camera";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -443,7 +473,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = co.daily.daily-virtual-camera;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.daily.daily-virtual-camera";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -476,7 +506,7 @@
 				"LIBRARY_SEARCH_PATHS[arch=*]" = /Library/Frameworks/GStreamer.framework/Libraries;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = co.daily.daily-virtual-camera.cam;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.daily.daily-virtual-camera.cam";
 				PRODUCT_NAME = "$(inherited)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -513,7 +543,7 @@
 				"LIBRARY_SEARCH_PATHS[arch=*]" = /Library/Frameworks/GStreamer.framework/Libraries;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = co.daily.daily-virtual-camera.cam;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.daily.daily-virtual-camera.cam";
 				PRODUCT_NAME = "$(inherited)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -535,7 +565,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3C5A95A928CA98A900495D31 /* Build configuration list for PBXNativeTarget "daily-virtual-camera" */ = {
+		3C5A95A928CA98A900495D31 /* Build configuration list for PBXNativeTarget "Daily Virtual Camera" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3C5A95AA28CA98A900495D31 /* Debug */,
@@ -554,6 +584,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CA50843E28F70AB10027D533 /* XCRemoteSwiftPackageReference "swift-log" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-log.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CA50844128F70ABF0027D533 /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA50843E28F70AB10027D533 /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+		CA5084A5290188FE0027D533 /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA50843E28F70AB10027D533 /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3C5A959228CA98A800495D31 /* Project object */;
 }

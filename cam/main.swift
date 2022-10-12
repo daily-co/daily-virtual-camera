@@ -1,14 +1,32 @@
-//
-//  main.swift
-//  cam
-//
-//  Created by vanessa pyne on 9/8/22.
-//
-
 import Foundation
 import CoreMediaIO
 
-let providerSource = camProviderSource(clientQueue: nil)
-CMIOExtensionProvider.startService(provider: providerSource.provider)
+import Logging
+
+let logger = Logger(label: "co.daily.DailyVirtualCamera")
+
+let userDefaults = UserDefaults.standard
+
+let width = userDefaults.videoWidth
+let height = userDefaults.videoHeight
+let frameRate = userDefaults.videoFramerate
+let pipeline = userDefaults.gStreamerPipeline
+
+let dimensions = CMVideoDimensions(width: width, height: height)
+
+let virtualCamera: VirtualCamera
+do {
+    virtualCamera = try .init(
+        localizedName: "Virtual Camera",
+        pipeline: pipeline,
+        dimensions: dimensions,
+        frameRate: frameRate
+    )
+} catch let error {
+    logger.error("\(error)")
+    exit(1)
+}
+
+virtualCamera.start()
 
 CFRunLoopRun()

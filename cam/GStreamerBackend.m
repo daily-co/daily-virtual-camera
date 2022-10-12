@@ -9,9 +9,7 @@
 
 @implementation GStreamerBackend
 
-static void
-decodebin_pad_added_cb(GstElement* decodebin, GstPad* new_pad, gpointer user_data)
-{
+static void decodebin_pad_added_cb(GstElement* decodebin, GstPad* new_pad, gpointer user_data) {
 	GStreamerBackend* backend = (__bridge GStreamerBackend*)user_data;
 
 	GstCaps* caps = gst_pad_get_current_caps(new_pad);
@@ -25,15 +23,13 @@ decodebin_pad_added_cb(GstElement* decodebin, GstPad* new_pad, gpointer user_dat
 	g_free(caps_str);
 }
 
-
--(instancetype) initWithPipeline:(NSString *)pipeline
-						   width:(int)width
-						  height:(int)height
-					   frameRate:(int)frameRate {
+- (instancetype)initWithPipeline:(NSString *)pipeline
+                            width:(int)width
+                           height:(int)height
+                        frameRate:(int)frameRate {
     gst_init(NULL, NULL);
 
-    self = [super init];
-    if (self) {
+    if (self = [super init]) {
 		_width = width;
 		_height = height;
 		_frameRate = frameRate;
@@ -84,8 +80,7 @@ decodebin_pad_added_cb(GstElement* decodebin, GstPad* new_pad, gpointer user_dat
     return self;
 }
 
--(void) linkPipeline:(GstPad*)new_pad
-{
+- (void)linkPipeline:(GstPad*)new_pad {
 	GstElement* queue = gst_element_factory_make("queue", NULL);
 	GstElement* videorate = gst_element_factory_make("videorate", NULL);
 	GstElement* ratefilter = gst_element_factory_make("capsfilter", NULL);
@@ -145,24 +140,24 @@ decodebin_pad_added_cb(GstElement* decodebin, GstPad* new_pad, gpointer user_dat
 	gst_element_sync_state_with_parent(GST_ELEMENT(_appsink));
 }
 
--(NSData*) nextFrameBuffer
-{
-	if (_appsink) {
-		GstSample *sample = gst_app_sink_pull_sample(_appsink);
-		GstBuffer *buffer = gst_sample_get_buffer(sample);
-
-		GstMapInfo bufmap;
-		gst_buffer_map(buffer, &bufmap, GST_MAP_READ);
-
-		NSData *data = [NSData dataWithBytes:bufmap.data length:bufmap.size];
-
-		gst_buffer_unmap(buffer, &bufmap);
-
-		gst_sample_unref(sample);
-
-		return data;
+- (NSData *)nextFrameBuffer {
+	if (!_appsink) {
+        return nil;
 	}
-	return nil;
+    
+    GstSample *sample = gst_app_sink_pull_sample(_appsink);
+    GstBuffer *buffer = gst_sample_get_buffer(sample);
+
+    GstMapInfo bufmap;
+    gst_buffer_map(buffer, &bufmap, GST_MAP_READ);
+
+    NSData *data = [NSData dataWithBytes:bufmap.data length:bufmap.size];
+
+    gst_buffer_unmap(buffer, &bufmap);
+
+    gst_sample_unref(sample);
+
+    return data;
 }
 
 @end

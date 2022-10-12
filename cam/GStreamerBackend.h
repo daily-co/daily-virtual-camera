@@ -6,22 +6,19 @@
 @interface GStreamerBackend : NSObject
 
 @property int width;
-
 @property int height;
-
 @property int frameRate;
 
 @property GstElement *pipeline;
-
 @property GstAppSink *appsink;
 
--(instancetype) initWithPipeline:(NSString *)pipeline
-						   width:(int)width
-						  height:(int)height
-					   frameRate:(int)frameRate;
+- (instancetype)initWithPipeline:(NSString *)pipeline
+                           width:(int)width
+                          height:(int)height
+                       frameRate:(int)frameRate;
 
--(void) linkPipeline:(GstPad*)new_pad;
+- (void)linkPipeline:(GstPad*)new_pad;
 
--(NSData*) nextFrameBuffer;
+- (NSData *)nextFrameBuffer;
 
 @end
