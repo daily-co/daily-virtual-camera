@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>videoFramerate</key>
+	<integer>30</integer>
+	<key>videoHeight</key>
+	<integer>720</integer>
+	<key>videoWidth</key>
+	<integer>1280</integer>
+	<key>gStreamerPipeline</key>
+	<string>videotestsrc pattern=ball ! capsfilter caps=video/x-raw,width=1280,height=720</string>
 	<key>CMIOExtension</key>
 	<dict>
 		<key>CMIOExtensionMachServiceName</key>
