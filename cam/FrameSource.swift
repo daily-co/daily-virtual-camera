@@ -84,7 +84,7 @@ class FrameSource {
             kCVPixelBufferPoolAllocationThresholdKey: 5
         ]
 
-        var statusCode: OSStatus = CVPixelBufferPoolCreatePixelBufferWithAuxAttributes(
+        let statusCode: OSStatus = CVPixelBufferPoolCreatePixelBufferWithAuxAttributes(
             kCFAllocatorDefault,
             self.bufferPool,
             bufferAuxAttributes,
@@ -120,13 +120,11 @@ class FrameSource {
     }
 
     func nextSampleBuffer() throws -> CMSampleBuffer {
-        let now = CMClockGetTime(CMClockGetHostTimeClock())
-
         let pixelBuffer = try self.pixelBuffer()
 
         CVPixelBufferLockBaseAddress(pixelBuffer, [])
 
-        var bufferPtr = CVPixelBufferGetBaseAddress(pixelBuffer)!
+        let bufferPtr = CVPixelBufferGetBaseAddress(pixelBuffer)!
 
         autoreleasepool {
             if let data = self.backend.nextFrameBuffer() {
