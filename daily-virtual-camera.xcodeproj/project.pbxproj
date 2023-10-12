@@ -502,6 +502,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
+					/Library/Frameworks/GStreamer.framework/Versions/1.0/Libraries,
+					/Library/Frameworks,
 				);
 				"LIBRARY_SEARCH_PATHS[arch=*]" = /Library/Frameworks/GStreamer.framework/Libraries;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
@@ -539,6 +541,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
+					/Library/Frameworks/GStreamer.framework/Versions/1.0/Libraries,
+					/Library/Frameworks,
 				);
 				"LIBRARY_SEARCH_PATHS[arch=*]" = /Library/Frameworks/GStreamer.framework/Libraries;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
