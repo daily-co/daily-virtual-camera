@@ -33,7 +33,7 @@ class VirtualCamera {
             frameRate: frameRate
         )
         let deviceSource = try DeviceSource(
-            modelName: "Virtual Camera"
+            modelName: "Daily Virtual Camera"
         )
         let streamSource = StreamSource(
             streamFormat: streamFormat,

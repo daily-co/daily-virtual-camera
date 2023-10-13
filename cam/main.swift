@@ -17,7 +17,7 @@ let dimensions = CMVideoDimensions(width: width, height: height)
 let virtualCamera: VirtualCamera
 do {
     virtualCamera = try .init(
-        localizedName: "Virtual Camera",
+        localizedName: "Daily Virtual Camera",
         pipeline: pipeline,
         dimensions: dimensions,
         frameRate: frameRate
