@@ -7,7 +7,7 @@ More info on developing camera extensions can be found [here](https://developer.
 
 ## requirements
 - apple dev team credentials
-- [gstreamer (>= 1.21.1)](https://gstreamer.freedesktop.org/pkg/osx/1.21.1/)
+- [gstreamer (>= 1.22.0)](https://gstreamer.freedesktop.org/pkg/osx/1.22.0/)
 > for a bare-bones, gstreamer-less boilerplate template version, checkout `boilerplate-template` branch
 
 ## installation
@@ -37,7 +37,7 @@ enabled active  teamID  bundleID (version)  name  [state]
 ```
 
 ```
-$ ffmpeg -f avfoundation -list_devices true -i "" 
+$ ffmpeg -f avfoundation -list_devices true -i ""
 ...
 [AVFoundation indev @ 0x7fb15bf05700] AVFoundation video devices:
 [AVFoundation indev @ 0x7fb15bf05700] [0] FaceTime HD Camera (Built-in)
@@ -53,7 +53,7 @@ $ ffmpeg -f avfoundation -list_devices true -i ""
 * `await initGUM('Daily Camera (daily)', 'https://bestfakemedia.biz/faux.mp4')`
 
 ## uninstallation
-open the app and click uninstall and go through the security & privacy permissions song and dance. 
+open the app and click uninstall and go through the security & privacy permissions song and dance.
 note: device will not be fully uninstalled until the computer is rebooted.
 
 ```
