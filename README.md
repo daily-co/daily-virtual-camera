@@ -13,7 +13,7 @@ More info on developing camera extensions can be found [here](https://developer.
 ## installation
 1. open `daily-virtual-camera.xcodeproj` in xcode
 2. select the `Daily Virtual Camera` scheme
-<img src="./readme-images/scheme.png" width="600">
+<img src="./readme-images/scheme.png" width="700">
 3. build app
 <img src="./readme-images/build.png" width="500">
 4. copy app from build directory to `/Applications`
