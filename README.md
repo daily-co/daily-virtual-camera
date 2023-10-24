@@ -43,16 +43,16 @@ $ ffmpeg -f avfoundation -list_devices true -i ""
 ...
 [AVFoundation indev @ 0x7fb15bf05700] AVFoundation video devices:
 [AVFoundation indev @ 0x7fb15bf05700] [0] FaceTime HD Camera (Built-in)
-[AVFoundation indev @ 0x7fb15bf05700] [1] Daily Camera (daily.co) <========================
+[AVFoundation indev @ 0x7fb15bf05700] [1] Daily Virtual Camera <========================
 [AVFoundation indev @ 0x7fb15bf05700] [2] Capture screen 0
 ```
 
 ## usage+ javascript hack
 
-* [update the camera name](https://github.com/daily-virtual-camera/macos-camera-extension/blob/main/browserConsoleSnippet.js#L42) if changed
-* use [the javascript snippet](https://github.com/daily-virtual-camera/macos-camera-extension/blob/main/browserConsoleSnippet.js) in your browser console.
+* [update the camera name](https://github.com/daily-co/daily-virtual-camera/blob/main/browserConsoleSnippet.js#L42) if changed
+* use [the javascript snippet](https://github.com/daily-co/daily-virtual-camera/blob/main/browserConsoleSnippet.js) in your browser console.
 * optional: pass in different fake media
-* `await initGUM('Daily Camera (daily)', 'https://bestfakemedia.biz/faux.mp4')`
+* `await initGUM('Daily Virtual Camera', 'https://bestfakemedia.biz/faux.mp4')`
 
 ## uninstallation
 open the app and click uninstall and go through the security & privacy permissions song and dance.
@@ -68,4 +68,5 @@ enabled active  teamID  bundleID (version)  name  [state]
 
 ## development
 
-If you want to generate your own fake media within the app [camProvider.swift](https://github.com/daily-virtual-camera/macos-camera-extension/blob/main/cam/camProvider.swift#L93-L160) is where you can change the [camera name](https://github.com/daily-virtual-camera/macos-camera-extension/blob/main/cam/camProvider.swift#L15) and do more interesting camera things... Go wild.
+If you want to generate your own fake media within the app, [main.swift](https://github.com/daily-co/daily-virtual-camera/blob/main/cam/main.swift) is where you can change the [camera name](https://github.com/daily-co/daily-virtual-camera/blob/main/cam/main.swift#L20)
+and you can also do more interesting camera things like changing the default [GStreamer video source](https://github.com/daily-co/daily-virtual-camera/blob/main/cam/UserDefaults%2BExtensions.swift#L15)... Go wild.
